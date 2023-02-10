@@ -15,3 +15,7 @@ I must have to be honest that I work much better when I have a good project part
 
 ## Status
 - Based project generated using [Ktor Project Generator](https://start.ktor.io/).
+
+## Key commands 
+- Start the server from command line: `./gradlew run`
+- Stop the server from browser: `http://localhost:8080/ktor/application/shutdown`
