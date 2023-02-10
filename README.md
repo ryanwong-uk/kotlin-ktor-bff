@@ -10,3 +10,8 @@ I do _still_ have a full-time job, and my private life to busy with. My plan is 
 Preliminary this BFF will be served the Giphy APIs to accompany my another demo app. 
 
 Since obviously this is an open-source project, Collaborations or comments are all welcomed.
+
+I must have to be honest that I work much better when I have a good project partner. Currently as this is still a solo project, apologise for my procrastination. 
+
+## Status
+- Based project generated using [Ktor Project Generator](https://start.ktor.io/).
