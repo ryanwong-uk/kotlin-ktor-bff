@@ -1,7 +1,7 @@
 package com.rwmobi
 
-import io.ktor.server.application.*
 import com.rwmobi.plugins.*
+import io.ktor.server.application.*
 
 fun main(args: Array<String>): Unit =
     io.ktor.server.cio.EngineMain.main(args)
