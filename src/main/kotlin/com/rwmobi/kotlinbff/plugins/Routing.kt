@@ -1,24 +1,29 @@
-package com.rwmobi.plugins
+package com.rwmobi.kotlinbff.plugins
 
-import io.ktor.server.routing.*
-import io.ktor.server.response.*
-import io.ktor.server.resources.*
-import io.ktor.resources.*
+import io.ktor.http.HttpStatusCode
+import io.ktor.resources.Resource
+import io.ktor.server.application.Application
+import io.ktor.server.application.call
+import io.ktor.server.application.install
+import io.ktor.server.http.content.resources
+import io.ktor.server.http.content.static
+import io.ktor.server.plugins.statuspages.StatusPages
 import io.ktor.server.resources.Resources
+import io.ktor.server.resources.get
+import io.ktor.server.response.respond
+import io.ktor.server.response.respondText
+import io.ktor.server.routing.get
+import io.ktor.server.routing.routing
 import kotlinx.serialization.Serializable
-import io.ktor.server.plugins.statuspages.*
-import io.ktor.http.*
-import io.ktor.server.http.content.*
-import io.ktor.server.application.*
 
 fun Application.configureRouting() {
     install(Resources)
     install(StatusPages) {
         exception<Throwable> { call, cause ->
-            call.respondText(text = "500: $cause" , status = HttpStatusCode.InternalServerError)
+            call.respondText(text = "500: $cause", status = HttpStatusCode.InternalServerError)
         }
     }
-    
+
     routing {
         get("/") {
             call.respondText("Hello World!")
@@ -33,6 +38,7 @@ fun Application.configureRouting() {
         }
     }
 }
+
 @Serializable
 @Resource("/articles")
 class Articles(val sort: String? = "new")

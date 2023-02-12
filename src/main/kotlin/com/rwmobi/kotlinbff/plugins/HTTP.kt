@@ -1,11 +1,16 @@
-package com.rwmobi.plugins
+package com.rwmobi.kotlinbff.plugins
 
-import io.ktor.server.plugins.defaultheaders.*
-import io.ktor.server.plugins.compression.*
-import io.ktor.server.plugins.cachingheaders.*
-import io.ktor.http.content.*
-import io.ktor.http.*
-import io.ktor.server.application.*
+import io.ktor.http.CacheControl
+import io.ktor.http.ContentType
+import io.ktor.http.content.CachingOptions
+import io.ktor.server.application.Application
+import io.ktor.server.application.install
+import io.ktor.server.plugins.cachingheaders.CachingHeaders
+import io.ktor.server.plugins.compression.Compression
+import io.ktor.server.plugins.compression.deflate
+import io.ktor.server.plugins.compression.gzip
+import io.ktor.server.plugins.compression.minimumSize
+import io.ktor.server.plugins.defaultheaders.DefaultHeaders
 
 fun Application.configureHTTP() {
     install(DefaultHeaders) {

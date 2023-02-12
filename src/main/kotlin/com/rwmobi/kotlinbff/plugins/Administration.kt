@@ -1,7 +1,8 @@
-package com.rwmobi.plugins
+package com.rwmobi.kotlinbff.plugins
 
-import io.ktor.server.engine.*
-import io.ktor.server.application.*
+import io.ktor.server.application.Application
+import io.ktor.server.application.install
+import io.ktor.server.engine.ShutDownUrl
 
 fun Application.configureAdministration() {
     install(ShutDownUrl.ApplicationCallPlugin) {
