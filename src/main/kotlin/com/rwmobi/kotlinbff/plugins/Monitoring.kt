@@ -9,13 +9,13 @@ import io.ktor.server.plugins.callid.CallId
 import io.ktor.server.plugins.callid.callIdMdc
 import io.ktor.server.plugins.callloging.CallLogging
 import io.ktor.server.request.path
-import java.util.concurrent.TimeUnit
 import org.slf4j.event.Level
+import java.util.concurrent.TimeUnit
 
 fun Application.configureMonitoring() {
     install(DropwizardMetrics) {
         Slf4jReporter.forRegistry(registry)
-            //.outputTo(this@module.log)
+            // .outputTo(this@module.log)
             .convertRatesTo(TimeUnit.SECONDS)
             .convertDurationsTo(TimeUnit.MILLISECONDS)
             .build()
