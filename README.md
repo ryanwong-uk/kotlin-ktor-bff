@@ -13,8 +13,15 @@ Since obviously this is an open-source project, Collaborations or comments are a
 
 I must have to be honest that I work much better when I have a good project partner. Currently as this is still a solo project, apologise for my procrastination. 
 
+## References
+This project will be built by referencing to the following work:
+- [bff-sample-ktor](https://github.com/michaelpearce-at/bff-sample-ktor)
+- ChatGPT 
+
 ## Status
 - Based project generated using [Ktor Project Generator](https://start.ktor.io/).
+- Basic project configurations done
+- Will refactor the code before implementing some real API entities
 
 ## Key commands 
 - Start the server from command line: `./gradlew run`
